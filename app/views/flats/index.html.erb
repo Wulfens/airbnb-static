@@ -1,0 +1,11 @@
+<h1>Airbnb</h1>
+
+<% @flats.each do |flat| %>
+  <div>
+    <h3><%= flat["name"] %></h3>
+    <%= link_to flat_path(flat["id"]) do %>
+      <%= image_tag flat["imageUrl"], width: 800 %>
+    <% end %>
+    <p><%= flat["price"] %> <%= flat["priceCurrency"] %></p>
+  </div>
+<% end %>
